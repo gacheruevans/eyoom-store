@@ -3,6 +3,11 @@
  * theme file : /theme/THEME_NAME/tail.html.php
  */
 if (!defined('_EYOOM_')) exit;
+
+/**
+ * 로고 타입 : 'image' || 'text'
+ */
+$logo = 'image';
 ?>
 
 <?php if (!$wmode) { ?>
@@ -27,18 +32,38 @@ if (!defined('_EYOOM_')) exit;
 	<?php /*----- footer 시작 -----*/ ?>
 	<footer class="footer">
 		<div class="container">
-			<div class="footer-top">
-				<div class="footer-nav">
-					<a href="<?php echo get_eyoom_pretty_url('page','provision'); ?>">서비스이용약관</a>
-					<a href="<?php echo get_eyoom_pretty_url('page','privacy'); ?>">개인정보처리방침</a>
-					<a href="<?php echo get_eyoom_pretty_url('page','noemail'); ?>">이메일무단수집거부</a>
+				<div class="footer-top">
+					<div class="container">
+						<div class="footer-nav">
+							<a href="<?php echo G5_URL; ?>" class="title-logo">
+								<?php if ($logo == 'text') { ?>
+									<h1><?php echo $config['cf_title']; ?></h1>
+								<?php } else if ($logo == 'image') { ?>
+									<?php if (!G5_IS_MOBILE) { ?>
+									<?php if (file_exists($top_logo) && !is_dir($top_logo)) { ?>
+									<img src="<?php echo $logo_src['top']; ?>" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+									<?php } else { ?>
+									<img src="<?php echo EYOOM_THEME_URL; ?>/image/site_logo_con.svg" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+									<?php } ?>
+									<?php } else { ?>
+									<?php if (file_exists($top_mobile_logo) && !is_dir($top_mobile_logo)) { ?>
+									<img src="<?php echo $logo_src['mobile_top']; ?>" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+									<?php } else { ?>
+									<img src="<?php echo EYOOM_THEME_URL; ?>/image/site_logo_con.svg" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+									<?php } ?>
+									<?php } ?>
+								<?php } ?>
+							</a>
+						</div>
+						<div class="footer-right-nav">
+							<a href="<?php echo get_eyoom_pretty_url('page','provision'); ?>">서비스이용약관</a>
+							<a href="<?php echo get_eyoom_pretty_url('page','privacy'); ?>">개인정보처리방침</a>
+							<a href="<?php echo get_eyoom_pretty_url('page','noemail'); ?>">이메일무단수집거부</a>
+							<a href="<?php echo G5_BBS_URL; ?>/faq.php">FAQ</a>
+							<a href="<?php echo G5_BBS_URL; ?>/qalist.php">1:1문의</a>
+						</div>
+					</div>
 				</div>
-				<div class="footer-right-nav">
-					<a href="<?php echo G5_BBS_URL; ?>/faq.php">FAQ</a>
-					<a href="<?php echo G5_BBS_URL; ?>/qalist.php">1:1문의</a>
-				</div>
-			</div>
-
 			<div class="footer-cont-info">
 				<?php if ($is_admin == 'super' && !G5_IS_MOBILE) { ?>
 				<div class="adm-edit-btn btn-edit-mode hidden-xs hidden-sm" style="top:-31px">
@@ -76,7 +101,7 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 				</div>
 				<?php } ?>
-				<strong class="text-black"><?php echo $bizinfo['bi_company_name']; ?></strong>
+				<strong class="text-gray"><?php echo $bizinfo['bi_company_name']; ?></strong>
 				<span class="info-divider">|</span>
 				<span>대표 : <?php echo $bizinfo['bi_company_ceo']; ?></span>
 				<span class="info-divider">|</span>
@@ -95,7 +120,7 @@ if (!defined('_EYOOM_')) exit;
 			</div>
 
 			<div class="footer-copyright">
-				<span>Copyright </span>&copy; <strong class="text-black f-w-400"><?php echo $config['cf_title']; ?></strong>. All Rights Reserved.
+				<span>Copyright </span>&copy; P2U<strong class="text-gray f-w-400"><?php echo $config['cf_title']; ?></strong>. All Rights Reserved.
 			</div>
 		</div>
 	</footer>

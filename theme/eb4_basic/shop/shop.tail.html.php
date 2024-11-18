@@ -3,6 +3,7 @@
  * theme file : /theme/THEME_NAME/shop.tail.html.php
  */
 if (!defined('_EYOOM_')) exit;
+
 ?>
 
 <?php if (!$wmode) { ?>
@@ -18,6 +19,7 @@ if (!defined('_EYOOM_')) exit;
 	<footer class="footer">
 		<div class="container">
 			<div class="footer-top">
+				
 				<div class="footer-nav">
 					<a href="<?php echo get_eyoom_pretty_url('page','provision'); ?>">서비스이용약관</a>
 					<a href="<?php echo get_eyoom_pretty_url('page','privacy'); ?>">개인정보처리방침</a>

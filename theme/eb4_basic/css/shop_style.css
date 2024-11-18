@@ -34,6 +34,11 @@
 .top-header-nav li.dropdown .dropdown-menu a {display:block;padding:5px 10px;color:#000}
 .top-header-nav li.dropdown .dropdown-menu a:hover {background-color:transparent;color:#3949ab}
 .top-header-nav li.dropdown:hover > .dropdown-menu {display:block}
+.top-header-nav li.top-header-nav-search {position:absolute;top:24px;left:50%;width:400px;transform:translateX(-50%)}
+.top-header-nav li.top-header-nav-search .eyoom-form .input {margin-bottom:0}
+.top-header-nav li.top-header-nav-search .eyoom-form .input input {height:42px;border: none;color:#000;border-radius:15px}
+.top-header-nav li.top-header-nav-search .eyoom-form .input input:focus {border-width:2px !important;border-color:#000 !important}
+.top-header-nav li.top-header-nav-search .eyoom-form .input-button .button {height:42px;line-height:42px;font-size:1.25rem;padding:0 15px;background-color:#000;color:#fff;top:0;right:0;border-left:0;opacity:1;border-top-right-radius:5px;border-bottom-right-radius:5px}
 .top-header-nav.thn-end {float:right}
 .top-header-nav.thn-end li {margin-right:0;margin-left:15px}
 .top-header-nav.thn-end li.dropdown .dropdown-menu {left:inherit;right:0}
@@ -50,11 +55,6 @@
 .header-title .container {position:relative;height:90px;display:flex}
 .header-title .title-logo {align-self:center}
 .header-title .title-logo img {width:auto;height:46px}
-.header-title .header-title-search {position:absolute;top:24px;left:50%;width:400px;transform:translateX(-50%)}
-.header-title .header-title-search .eyoom-form .input {margin-bottom:0}
-.header-title .header-title-search .eyoom-form .input input {height:42px;border:2px solid #000;color:#000;border-radius:5px}
-.header-title .header-title-search .eyoom-form .input input:focus {border-width:2px !important;border-color:#000 !important}
-.header-title .header-title-search .eyoom-form .input-button .button {height:42px;line-height:42px;font-size:1.25rem;padding:0 15px;background-color:#000;color:#fff;top:0;right:0;border-left:0;opacity:1;border-top-right-radius:5px;border-bottom-right-radius:5px}
 .header-title .header-title-btn {position:absolute;top:30px;right:12px;height:30px}
 .header-title .header-title-btn .title-btn {position:relative;float:left}
 .header-title .header-title-btn .title-btn .title-btn-in {position:relative;width:120px;height:30px;line-height:30px;background:#1d1d26;text-align:left;font-size:.9375rem;color:#fff;padding:0 10px;border-top-left-radius:5px;border-bottom-left-radius:5px;display:flex;justify-content:space-between}
@@ -249,25 +249,27 @@
 }
 
 /*---------- Footer ----------*/
-.footer {position:relative;border-top:1px solid rgba(0,0,0,0.15)}
+.footer {position:relative;border-top:1px solid rgba(0,0,0,0.15); background: #000;}
+.footer .title-logo {align-self:center}
+.footer .title-logo img {width:auto;height:46px}
 .footer-top {margin-bottom:30px;padding:30px 0;border-bottom:1px solid rgba(0,0,0,0.15)}
 .footer-top:after {content:"";display:block;clear:both}
 .footer-nav {width:50%;float:left}
-.footer-nav a {color:#353535;font-size:.9375rem;margin-right:10px}
+.footer-nav a {color:#fff;font-size:.9375rem;margin-right:10px}
 .footer-nav a:hover {text-decoration:underline}
 .footer-right-nav {position:relative;width:50%;float:right;text-align:right}
-.footer-right-nav a {color:#353535;font-size:.9375rem;margin-right:10px}
+.footer-right-nav a {color:#ffffff;font-size:.9375rem;margin-right:10px}
 .footer-right-nav a:hover {text-decoration:underline}
-.footer-cont-info {position:relative;font-size:.9375rem;margin-top:30px;word-break:keep-all;text-align:center;line-height:1.6}
+.footer-cont-info {position:relative;font-size:.9375rem;margin-top:30px;word-break:keep-all;text-align:left;line-height:1.6}
 .footer-cont-info strong {color:#353535}
 .footer-cont-info span {color:#757575}
 .footer-cont-info span.info-divider {margin-left:5px;margin-right:5px;color:#d5d5d5}
 .footer-cont-info a {color:#555555;text-decoration:underline}
 .footer-cont-info a:hover {color:#353535}
-.footer-copyright {color:#656565;font-size:.8125rem;text-align:center;padding:30px 0}
+.footer-copyright {color:#656565;font-size:.8125rem;text-align:left;padding:30px 0}
 @media (max-width:991px) {
-    .footer-nav {width:100%;text-align:center}
-    .footer-right-nav {width:100%;text-align:center;margin-top:10px}
+    .footer-nav {width:100%;text-align:left}
+    .footer-right-nav {width:100%;text-align:left;margin-top:10px}
 }
 @media (max-width:767px) {
 	.footer-copyright span {display:none}
