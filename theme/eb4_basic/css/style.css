@@ -19,6 +19,7 @@
 .top-header-nav li {float:left;display:block;padding:0;color:#000;margin-right:15px}
 .top-header-nav li > a {display:block;color:#000;height:45px;line-height:45px;padding:0}
 .top-header-nav li > a i {margin-right:5px;color:#959595}
+.top-header-nav li > a:hover {border-bottom:2px solid #A445DE; color:#A445DE}
 .top-header-nav .cs-nav {margin:0}
 .top-header-nav .cs-nav.s-nav {margin-right:15px}
 .top-header-nav .cs-nav a {position:relative;;display:block;width:90px}
